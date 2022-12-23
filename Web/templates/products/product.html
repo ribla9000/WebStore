@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="product_on_self_page">
+				
+				<h2 id="productselfpage_name">{{product.name}}</h2>
+				
+					<h4 id="productselfpage_description"><b>Описаиние:</b> {{ product.description }} </h4>
+							{% if product.discount > 0 %}
+								<div class="price_and_other">
+									<h4 id="TEXT_NEW_PRICE">NEW PRICE! BUY IT NOW!</h4>
+						 			<h1 id="productselfpage_price_dis">{{product.price_with_discount}}<span style="color: green;">$</span></h1>
+						 			
+						 			<h4 id="cross_price"><s> {{product.price}}$</s></h4>
+						 		
+						 		</div>	
+						 		{%else%}
+									<h3 id="productselfpage_price"><b>{{product.price}}$</b></h2>
+						 			
+						 			
+							{%endif%}
+							
+							
+							
+							<form id="price_and_form" action="{% url 'in_shopcart' %}">{% csrf_token %}
+								
+							
+								<button type="submit" id="btn_self_page" class="btn-buy" 
+									data-product_id = "{{ product.id }}"
+									data-product_name = "{{ product.name }}"
+									data-product_price = "{{ product.price }}"
+									data-product_discount = "{{product.discount}}"
+									data-product_price_with_discount = "{{product.price_with_discount}}"
+								>
+
+									BUY
+								</button>
+							
+							<input type="number" class="from-inline" min="0" placeholder="count" id="count1">
+
+							</form>
+							
+						
+						
+				{% for image_item in product.productimage_set.all %}
+					<div class="product_self_image_on_page">
+					<img src="{{ image_item.image.url }}" class="all_images_in_page">
+					</div>
+				{%endfor%}
+
+				
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+{% endblock %}

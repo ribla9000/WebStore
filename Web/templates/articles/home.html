@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div>
+	
+
+	<div class="section section1 new_products-container">
+		<div class="container">
+			<div class="row">
+				<h1 style="text-align: center; color: #5485b3; text-shadow: 1px 1px 1px #2b547a;">NEW</h1>
+				{% for product_image in products_images_new_products %}
+
+					<div class="col-lg-3">
+						<div class="products_on_web">
+							<div class="product-item">
+								<div>
+									<a href="{% url 'product' product_image.product.id %}"> 
+
+									<img src="{{ product_image.image.url }}" class="images">
+									</a>
+								</div>
+								{% if product_image.product.discount%}
+									<div class="discount-container">
+									<h4><b>{{product_image.product.discount}}%</b></h4>
+									</div>
+							
+								{% endif %}
+								<div class="nameofproduct">
+								<b style="font-style: bold" class="product_name">{{ product_image.product.name }}</b>
+								</div>
+								
+								
+								{% if product_image.product.price_with_discount > 0 %}
+								<div class="price">
+								<span style="font-size: 26px;font-family:  bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price_with_discount}}</b><b style="color: green; font-size: 25px;">$</b>	
+									<s style="font-size: 15px; font-family: bold; color: #1b7a1a;">{{ product_image.product.price }}$</s>
+								</div>
+								{%else%}
+									<div class="price">
+									<span style="font-family: bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price}}</b><b style="color: green; font-size: 25px;">$</b>
+									</div>
+								{%endif%}
+
+							
+
+							
+							
+							</div>
+							<div class="description">
+							<br>{{product_image.product.description | truncatechars_html:200}}</br>
+							</div>
+						</div>
+
+						<div class="add-to-cart">
+							<button class="btn-succes" id="button-add-to-cart" type="submit"
+								data-product_id = "{{ product_image.product.id }}"
+								data-product_name = "{{ product_image.product.name }}"
+								data-product_price = "{{ product_image.product.price }}"
+								data-product_discount = "{{product_image.product.discount}}"
+								data-product_price_with_discount = "{{product_image.product.price_with_discount}}"
+							>
+								to cart
+							</button>
+						</div>
+					</div>
+
+				
+				{%endfor%}
+				
+
+				
+
+				
+
+				
+			</div>
+			
+		</div>
+		
+	</div>
+
+	
+
+	<div class="section section1-laptops">
+		<div class="container">
+			<div class="row">
+				<h1 style="text-align: center; color: #5485b3; text-shadow: 1px 1px 1px #2b547a;">LAPTOPS</h1>
+				{% for product_image in products_images_laptops %}
+
+					<div class="col-lg-3">
+						<div class="products_on_web">
+							<div class="product-item">
+								<div>
+									<a href="{% url 'product' product_image.product.id %}"> 
+
+									<img src="{{ product_image.image.url }}" class="images">
+									</a>
+								</div>
+								{% if product_image.product.discount%}
+									<div class="discount-container">
+									<h4><b>{{product_image.product.discount}}%</b></h4>
+									</div>
+							
+								{% endif %}
+								<div class="nameofproduct">
+								<b style="font-style: bold" class="product_name">{{ product_image.product.name }}</b>
+								</div>
+								
+								
+								{% if product_image.product.price_with_discount > 0 %}
+								<div class="price">
+								<span style="font-size: 26px;font-family:  bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price_with_discount}}</b><b style="color: green; font-size: 25px;">$</b>	
+									<s style="font-size: 15px; font-family: bold; color: #1b7a1a;">{{ product_image.product.price }}$</s>
+								</div>
+								{%else%}
+									<div class="price">
+									<span style="font-family: bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price}}</b><b style="color: green; font-size: 25px;">$</b>
+									</div>
+								{%endif%}							</div>
+							<div class="description">
+							<br>{{product_image.product.description | truncatechars_html:200}}</br>
+							</div>
+							
+						</div>
+
+						<div class="add-to-cart">
+							<button class="btn-succes" id="button-add-to-cart" type="button"
+								data-product_id = "{{ product_image.product.id }}"
+								data-product_name = "{{ product_image.product.name }}"
+								data-product_price = "{{ product_image.product.price }}"
+								data-product_discount = "{{product_image.product.discount}}"
+								data-product_price_with_discount = "{{product_image.product.price_with_discount}}"
+								>
+
+									 to cart
+							</button>
+						</div>
+					</div>
+
+				
+				{%endfor%}
+				
+
+				
+
+				
+
+				
+			</div>
+			
+		</div>
+
+	
+
+<div class="section section1-smartphones">
+		<div class="container">
+			<div class="row">
+				<h1 style="text-align: center; color: #5485b3; text-shadow: 1px 1px 1px #2b547a;">SMARTPHONES</h1>
+				{% for product_image in products_images_smartphones %}
+
+					<div class="col-lg-3">
+						<div class="products_on_web">
+							<div class="product-item">
+								<div>
+									<a href="{% url 'product' product_image.product.id %}"> 
+
+									<img src="{{ product_image.image.url }}" class="images">
+									</a>
+								</div>
+								{% if product_image.product.discount%}
+									<div class="discount-container">
+									<h4><b>{{product_image.product.discount}}%</b></h4>
+									</div>
+							
+								{% endif %}
+								<div class="nameofproduct">
+								<b style="font-style: bold" class="product_name">{{ product_image.product.name }}</b>
+								</div>
+								
+								
+								{% if product_image.product.price_with_discount > 0 %}
+								<div class="price">
+								<span style="font-size: 26px;font-family:  bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price_with_discount}}</b><b style="color: green; font-size: 25px;">$</b>	
+									<s style="font-size: 15px; font-family: bold; color: #1b7a1a;">{{ product_image.product.price }}$</s>
+								</div>
+								{%else%}
+									<div class="price">
+									<span style="font-family: bold; color: #022929;">PRICE: </span><b style="font-style: bold; font-size: 25px">{{product_image.product.price}}</b><b style="color: green; font-size: 25px;">$</b>
+									</div>
+								{%endif%}
+							
+							</div>
+							<div class="description">
+							<br>{{product_image.product.description | truncatechars_html:200}}</br>
+							</div>
+							
+						</div>
+
+						<div class="add-to-cart">
+							<button class="btn-succes" id="button-add-to-cart" type="button"
+								data-product_id = "{{ product_image.product.id }}"
+								data-product_name = "{{ product_image.product.name }}"
+								data-product_price = "{{ product_image.product.price }}"
+								data-product_discount = "{{product_image.product.discount}}"
+								data-product_price_with_discount = "{{product_image.product.price_with_discount}}"
+
+							>
+
+									 to cart
+							</button>
+						</div>
+					</div>
+
+				
+				{%endfor%}
+				
+
+				
+
+				
+
+				
+			</div>
+			
+		</div>
+
+{%endblock%}

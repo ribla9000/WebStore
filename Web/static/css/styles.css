@@ -1,0 +1,248 @@
+
+
+
+.navbar{
+   background-color: #737373;
+
+}
+
+.wrapper{
+
+   margin-top: 2%;
+   height: 100%;
+   margin-left: 9%;
+   margin-right: 10%;
+  /*
+   border: 10px solid darkred;
+   border-width: thick;*/
+ 
+
+   /*background-color: #EC126FFF;*/
+}
+
+/*.elements{
+   margin-top: 2%;
+   margin-left: 5%;
+   
+   padding-top: 33px;
+   
+   background-color: #6c49cc;
+   border-radius: 10px;*/
+
+}
+
+}
+.btn{
+   color: #4d201d;
+
+}
+.btn:hover{
+ color: #fcfcfc;
+ 
+}
+.head-name{
+   color:#FFC0CB;
+   font-family: 'Edu SA Beginner', cursive;
+   font-size:32px; 
+   text-shadow: -2px 2px 2px #c048c2; 
+   transform: 10%;
+   text-decoration: none;
+
+}
+.section-top{
+   margin-top: 20px;
+
+
+}
+
+.products_on_web{
+   
+   height: 567px;
+   width: 250px;
+   background-color: floralwhite;
+   position: relative;
+   border: 3px  solid dimgrey;
+
+}
+.btn-succes{
+    display: block;
+    
+    font-size: 25px ;
+    color: #ebebeb;
+    text-align: center;
+
+    border: none;
+    background-color: #4fc6e0;
+
+    position: relative;
+    
+    width: 200px;
+    margin-left: 22px;
+    
+    bottom: 60px;
+    font-family: 'IMPACT';
+    
+    border-radius: 10px;
+   
+}
+.btn-succes:hover{
+   background-color: #57b9cf;
+   color: #b8e8f2;
+
+
+}
+.images{
+
+   image-rendering: -webkit-optimize-contrast;
+   position: relative;
+    /*float: left;*/
+    width: 205px;
+    height: 212px;
+    
+      
+    left: 16px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    
+}
+.product-item{
+   margin-top: -1px;
+   font-size: 24px;
+
+   
+}
+.discount-container{
+   height: auto;
+   margin-top: -114px;
+   position: absolute;
+   
+   margin-right: 190px;
+   
+   border-radius: 5px;
+   font-size: 20px;
+
+   color: white;
+   background-color: #d13d2a;
+}
+
+
+
+.product_self_image_on_page{
+   
+   width: auto;
+   margin-right: 350px;
+
+
+}
+
+
+#productselfpage_name {
+   position: absolute;
+   font-size: 70px;
+   margin-left: 600px;
+   
+   
+}
+
+#productselfpage_description{
+    position: absolute;
+    margin-left: 400px;
+    margin-right: 100px;
+    margin-top: 213px;
+    word-break: break-all
+}
+#productselfpage_price{
+   position: absolute;
+   margin-left: 400px;
+   margin-right: 100px;
+   margin-top: 30px;
+   font-size: 40px;
+   
+   
+
+}
+/*#productselfpage_price_dis{
+   position: absolute;
+   margin-left: 400px;
+   margin-right: 100px;
+   margin-top: 30px;
+   font-size: 40px;
+   color: black;
+
+}
+#cross_price{
+   position: absolute;
+   margin-left: 490px;
+   margin-right: 100px;
+   margin-top: 48px;
+   font-size: 22px;
+   color: green;
+   
+}
+#TEXT_NEW_PRICE{
+   position: absolute;
+   margin-left: 490px;
+   margin-right: 100px;
+   margin-top: 48px;
+   font-size: 22px;
+   color: green;
+}*/
+.price_and_other{
+     position: absolute;
+    margin-left: 400px;
+    margin-top: 84px;
+}
+.btn-buy {
+  position: absolute;
+  margin-left: 150px;
+  background-color: #3cc0de;
+}
+.btn-buy:hover{
+   background-color: #39b7d4;
+   content: 'add?';
+
+}
+.btn-buy:active{
+   background-color: #399bd4;
+
+}
+#price_and_form{
+  
+    position: relative;
+    top: 177px;
+    margin-left: 1075px;
+}
+/*#self_image{
+   position: absolute;
+   margin-top: 41px;
+   margin-left: 10px ;
+   width: 500px;
+   height: auto;
+}*/
+
+.all_images_in_page{
+   image-rendering: -webkit-optimize-contrast;
+   position: relative;
+    /*float: left;*/
+    width: 300px;
+    height: auto;
+    
+   margin-top:  ;
+    left: 16px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden{
+   display: none;
+}
+.description{
+   word-wrap: break-word;
+}
+.product-page-description{
+
+   word-wrap: break-word;
+}
+
